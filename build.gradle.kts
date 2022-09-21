@@ -13,7 +13,7 @@ buildscript {
 
 plugins {
     jacoco
-    id("org.jetbrains.intellij") version "0.4.8"
+    id("org.jetbrains.intellij") version "0.4.9"
     kotlin("jvm") version "1.3.30"
 }
 val kotlinVersion = plugins.getPlugin(KotlinPluginWrapper::class.java).kotlinPluginVersion
@@ -43,7 +43,7 @@ repositories {
 }
 
 intellij {
-    version = "IC-2019.1"
+    version = "IC-2021.1"
     pluginName = "mainframer-integration"
     updateSinceUntilBuild = true
 }
@@ -59,7 +59,7 @@ publishPlugin {
 
 patchPluginXml {
     sinceBuild("145")
-    untilBuild("192.*")
+    untilBuild("193.*")
 }
 
 fun readVersion(): String {

@@ -31,7 +31,7 @@ class BringConsoleToFrontExecutionResult(
     }
 
     private fun bringConsoleToFront() {
-        ExecutionManager.getInstance(environment.project).contentManager.toFrontRunContent(executor, processHandler)
+        ExecutionManager.getInstance(environment.project)?.getContentManager().toFrontRunContent(executor, processHandler)
     }
 
     class OnProcessStartedProcessAdapter(val onProcessStarted: () -> Unit) : ProcessAdapter() {
